@@ -9,7 +9,5 @@ license = "MIT"
 include = ["LICENSE", "README.md", "Cargo.toml", "/src/"]
 keywords = ["console", "windows", "utf8"]
 
-[dependencies]
-
 [target.'cfg(windows)'.dependencies]
 windows = { version = "0.62.1", features = ["Win32_System_Console"] }

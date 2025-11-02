@@ -1,10 +1,17 @@
+// Imports are now only made on Windows!
+
+#[cfg(windows)]
 use windows::Win32::Foundation::INVALID_HANDLE_VALUE;
+#[cfg(windows)]
 use windows::Win32::System::Console::GetStdHandle;
+#[cfg(windows)]
 use windows::Win32::System::Console::STD_OUTPUT_HANDLE;
+#[cfg(windows)]
 use windows::Win32::System::Console::{
     CONSOLE_MODE, ENABLE_VIRTUAL_TERMINAL_PROCESSING, GetConsoleMode, SetConsoleCP, SetConsoleMode,
     SetConsoleOutputCP,
 };
+#[cfg(windows)]
 use windows::core::Result;
 
 /// Enable UTF-8 for windows
