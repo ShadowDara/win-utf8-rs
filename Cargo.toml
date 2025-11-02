@@ -1,0 +1,15 @@
+[package]
+name = "win-utf8-rs"
+version = "0.1.0"
+edition = "2024"
+authors = ["Shadowdara"]
+readme = "README.md"
+description = "a function to enable UTF-8 for windows"
+license = "MIT"
+include = ["LICENSE", "README.md", "Cargo.toml", "/src/"]
+keywords = ["console", "windows", "utf8"]
+
+[dependencies]
+
+[target.'cfg(windows)'.dependencies]
+windows = { version = "0.62.1", features = ["Win32_System_Console"] }
