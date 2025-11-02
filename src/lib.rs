@@ -7,8 +7,10 @@ use windows::Win32::System::Console::{
 };
 use windows::core::Result;
 
-// Enable UTF-8 for windows
+/// Enable UTF-8 for windows
+/// Function does not nothing on other plattforms except windows
 pub fn enable_utf8() -> Result<()> {
+    // specifies Code for Windows
     #[cfg(windows)]
     {
         unsafe {
@@ -34,5 +36,6 @@ pub fn enable_utf8() -> Result<()> {
         }
     }
 
+    // Returning Ok on all plattforms
     Ok(())
 }
