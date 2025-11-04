@@ -7,7 +7,7 @@ Terminal
 add
 ```toml
 [target.'cfg(windows)'.dependencies]
-win-utf8-rs = "0.1.1"
+win-utf8-rs = "0.2.1"
 ```
 
 Use
